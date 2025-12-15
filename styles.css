@@ -222,13 +222,13 @@ p{
   align-items:center;
   gap:8px;
   font-size:0.9rem;
-  color:#dbeafe;
+  color:#ffffff;
   font-weight:500;
 }
 
 .exercises-list input[type="checkbox"]{
-  width:18px;
-  height:18px;
+  width:22px;
+  height:22px;
   accent-color:#0b4da0;
 }
 
