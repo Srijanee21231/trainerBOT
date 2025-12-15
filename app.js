@@ -43,7 +43,7 @@ function generateRoutine(){
   const reps = Math.max(1, parseInt(repsEl.value)||1)
   const sets = Math.max(1, parseInt(setsEl.value)||1)
 
-  const workSecondsPerRep = 4
+  const workSecondsPerRep = 3
   const restAfterExercise = 60
   const restAfterSet = restEl.value
 
