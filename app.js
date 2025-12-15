@@ -44,7 +44,7 @@ function generateRoutine(){
   const sets = Math.max(1, parseInt(setsEl.value)||1)
 
   const workSecondsPerRep = 4
-  const restAfterExercise = 30
+  const restAfterExercise = 60
   const restAfterSet = restEl.value
 
   const exercises = selected.length ? selected : Array.from(document.querySelectorAll('input[name="exercise"]')).map(i=>i.value)
