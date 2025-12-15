@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TrainerBOT — Build a Routine</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="container">
+      <h1>TrainerBOT</h1>
+
+      <section class="controls">
+        <fieldset class="exercises" aria-label="Exercises">
+          <legend>Exercises (select one or more)</legend>
+          <div class="exercises-list">
+            <label><input type="checkbox" name="exercise" value="high-knee-claps"> <span class="ex-label">High knee claps</span></label>
+            <label><input type="checkbox" name="exercise" value="squats"> <span class="ex-label">Squats</span></label>
+            <label><input type="checkbox" name="exercise" value="cross-crunches"> <span class="ex-label">cross crunches</span></label>
+            <label><input type="checkbox" name="exercise" value="high-knee-raise"> <span class="ex-label">High knee raise</span></label>
+            <label><input type="checkbox" name="exercise" value="crunches"> <span class="ex-label">Crunches</span></label>
+
+
+            <label><input type="checkbox" name="exercise" value="bicep-curls"> <span class="ex-label">Bicep Curls</span></label>
+            <label><input type="checkbox" name="exercise" value="hammer-curls"> <span class="ex-label">Hammer Curls</span></label>
+            <label><input type="checkbox" name="exercise" value="shoulder-press"> <span class="ex-label">Shoulder Press</span></label>
+            <label><input type="checkbox" name="exercise" value="upright-rows"> <span class="ex-label">Upright Rows</span></label>
+            <label><input type="checkbox" name="exercise" value="lateral-raise"> <span class="ex-label">Lateral raise</span></label>
+            <label><input type="checkbox" name="exercise" value="around-the-world"> <span class="ex-label">Around the world</span></label>
+            <label><input type="checkbox" name="exercise" value="platter-serve"> <span class="ex-label">Platter serve</span></label>
+            
+          </div>
+        </fieldset>
+
+        <div class="row">
+          <label for="reps">Reps (or seconds for timed exercises)</label>
+          <input id="reps" type="number" min="1" value="10">
+        </div>
+
+        <div class="row">
+          <label for="sets">Sets</label>
+          <input id="sets" type="number" min="1" value="3">
+        </div>
+
+        <div class="row">
+          <label for="rest">Rest between sets (seconds)</label>
+          <input id="rest" type="number" min="0" value="60">
+        </div>
+
+        <div class="row">
+          <label for="notify">Notify on transitions (sound/vibrate)</label>
+          <input id="notify" type="checkbox" checked>
+        </div>
+
+        <div class="actions">
+          <button id="generate">Generate Routine</button>
+          <button id="start" disabled>Start</button>
+          <button id="pause" disabled>Pause</button>
+          <button id="reset" disabled>Reset</button>
+          <!-- <button id="save">Save</button>
+          <button id="load">Load</button> -->
+        </div>
+      </section>
+
+      <section class="preview">
+        <h2>Routine</h2>
+        <ol id="routineList" class="routine-list"></ol>
+      </section>
+
+      <section class="timer">
+        <h2 id="timerTitle">Timer</h2>
+        <div id="countdown" class="countdown" aria-live="polite">00:00</div>
+        <div id="progressBar" class="progress"><div id="progressFill"></div></div>
+      </section>
+
+      <footer class="small">Open the page in a modern browser. Timers continue while the tab is active.</footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
