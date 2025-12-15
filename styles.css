@@ -37,3 +37,354 @@ h1{margin:0 0 18px;font-size:28px}
   .controls{grid-template-columns:1fr}
   .controls .actions{grid-column:span 1;flex-wrap:wrap}
 }
+
+
+
+i want the stylesheet to make my website modern and legible and stylish. modify above
+
+Here is a refined version of your stylesheet that keeps your colors but improves legibility, spacing, and modern feel (better typography, contrast, and cleaner layout): [1][2][3]
+
+```css
+:root{
+  --bg:#020617;
+  --bg-gradient-start:#020617;
+  --bg-gradient-end:#020617;
+  --card:#020617;
+  --card-elevated:rgba(15,23,42,0.95);
+  --muted:#9ca3af;
+  --accent:#60a5fa;
+  --accent-soft:rgba(96,165,250,0.16);
+  --success:#34d399;
+  --danger:#f97373;
+  --border-subtle:rgba(148,163,184,0.18);
+  --shadow-soft:0 18px 45px rgba(15,23,42,0.8);
+  --radius-sm:8px;
+  --radius-md:12px;
+  --radius-lg:18px;
+  --radius-pill:999px;
+}
+
+/* Global reset & base */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+html,
+body{
+  height:100%;
+  margin:0;
+  padding:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:#e5e7eb;
+  background:
+    radial-gradient(circle at top left,#1d283a 0,transparent 55%),
+    radial-gradient(circle at bottom right,#0b1120 0,transparent 55%),
+    linear-gradient(180deg,#020617 0%,#020617 100%);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+/* Typography scale */
+h1{
+  margin:0 0 18px;
+  font-size:2rem;
+  line-height:1.2;
+  letter-spacing:0.02em;
+  color:#e5e7eb;
+}
+
+h2{
+  margin:0 0 10px;
+  font-size:1.1rem;
+  font-weight:600;
+  color:#e5e7eb;
+}
+
+p{
+  margin:0 0 0.75rem;
+  font-size:0.95rem;
+  line-height:1.6;
+  color:var(--muted);
+}
+
+/* Container / card */
+.container{
+  max-width:880px;
+  margin:32px auto;
+  padding:22px 22px 20px;
+  border-radius:var(--radius-lg);
+  background:
+    linear-gradient(135deg,rgba(15,23,42,0.96),rgba(15,23,42,0.92));
+  border:1px solid var(--border-subtle);
+  box-shadow:var(--shadow-soft);
+  backdrop-filter:blur(26px) saturate(150%);
+}
+
+/* Controls layout */
+.controls{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px 14px;
+  align-items:end;
+}
+
+.controls .row{
+  grid-column:span 1;
+}
+
+.controls .actions{
+  grid-column:span 2;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+/* Labels & inputs */
+.controls label{
+  display:block;
+  margin-bottom:6px;
+  font-size:0.75rem;
+  font-weight:600;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+/* Shared input styles */
+.controls select,
+.controls input{
+  width:100%;
+  padding:9px 11px;
+  border-radius:var(--radius-md);
+  border:1px solid rgba(148,163,184,0.35);
+  background:rgba(15,23,42,0.7);
+  color:#e5e7eb;
+  font-size:0.9rem;
+  line-height:1.4;
+  outline:none;
+  transition:
+    border-color 0.16s ease,
+    box-shadow 0.16s ease,
+    background 0.16s ease,
+    transform 0.1s ease;
+}
+
+/* Modern, legible select styling */
+.controls select{
+  color:#0b4da0;
+  background:rgba(15,23,42,0.9);
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+  background-image:
+    linear-gradient(45deg,transparent 50%,#60a5fa 52%),
+    linear-gradient(135deg,#60a5fa 52%,transparent 54%);
+  background-position:
+    calc(100% - 18px) 52%,
+    calc(100% - 12px) 52%;
+  background-size:6px 6px;
+  background-repeat:no-repeat;
+}
+
+.controls option{
+  color:#042a3b;
+  background:#f9fafb;
+}
+
+/* Input focus */
+.controls select:focus,
+.controls input:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 1px rgba(96,165,250,0.32);
+  background:rgba(15,23,42,0.96);
+  transform:translateY(-1px);
+}
+
+/* Exercises group */
+.exercises{
+  grid-column:span 2;
+  padding:10px 12px;
+  border-radius:var(--radius-md);
+  border:1px solid rgba(148,163,184,0.3);
+  background:radial-gradient(circle at top left,rgba(15,23,42,0.95),rgba(15,23,42,0.9));
+}
+
+.exercises-list{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.exercises-list label{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:0.9rem;
+  color:#dbeafe;
+  font-weight:500;
+}
+
+.exercises-list input[type="checkbox"]{
+  width:18px;
+  height:18px;
+  accent-color:#0b4da0;
+}
+
+/* Buttons */
+.actions button{
+  padding:10px 16px;
+  border-radius:var(--radius-pill);
+  border:1px solid rgba(37,99,235,0.6);
+  background:
+    radial-gradient(circle at top left,rgba(96,165,250,0.32),transparent 55%),
+    linear-gradient(135deg,#1d4ed8,#22c55e);
+  color:#e5e7eb;
+  cursor:pointer;
+  font-size:0.9rem;
+  font-weight:600;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.16s ease,
+    filter 0.16s ease,
+    opacity 0.12s ease;
+  box-shadow:0 12px 32px rgba(15,23,42,0.7);
+}
+
+.actions button:hover:not([disabled]){
+  transform:translateY(-1px);
+  filter:brightness(1.05);
+  box-shadow:0 16px 40px rgba(15,23,42,0.9);
+}
+
+.actions button:active:not([disabled]){
+  transform:translateY(0);
+  box-shadow:0 8px 22px rgba(15,23,42,0.85);
+}
+
+.actions button[disabled]{
+  opacity:0.5;
+  cursor:not-allowed;
+  box-shadow:none;
+}
+
+/* Routine preview */
+.preview{
+  margin-top:20px;
+}
+
+.routine-list{
+  margin-top:8px;
+  padding:12px 10px;
+  border-radius:var(--radius-md);
+  min-height:84px;
+  background:linear-gradient(135deg,rgba(15,23,42,0.95),rgba(15,23,42,0.9));
+  border:1px solid rgba(148,163,184,0.35);
+}
+
+.routine-item{
+  padding:10px 10px;
+  margin-bottom:8px;
+  border-radius:var(--radius-md);
+  background:
+    linear-gradient(115deg,rgba(148,163,184,0.16),transparent);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:0.9rem;
+  color:#e5e7eb;
+}
+
+/* Timer section */
+.timer{
+  margin-top:22px;
+  padding-top:12px;
+  border-top:1px solid rgba(148,163,184,0.35);
+}
+
+.countdown{
+  font-size:2.6rem;
+  margin:6px 0 12px;
+  color:var(--accent);
+  font-weight:600;
+  letter-spacing:0.08em;
+}
+
+/* Progress bar */
+.progress{
+  height:10px;
+  border-radius:var(--radius-pill);
+  background:rgba(15,23,42,0.9);
+  border:1px solid rgba(148,163,184,0.4);
+  overflow:hidden;
+}
+
+#progressFill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--accent),var(--success));
+  box-shadow:0 0 18px rgba(96,165,250,0.6);
+  transition:width 0.25s ease-out;
+}
+
+/* Small helper text */
+.small{
+  margin-top:14px;
+  font-size:0.75rem;
+  color:var(--muted);
+}
+
+/* Responsive tweaks */
+@media (max-width:700px){
+  .container{
+    margin:18px 12px;
+    padding:18px 14px 16px;
+  }
+
+  .controls{
+    grid-template-columns:1fr;
+  }
+
+  .controls .actions{
+    grid-column:span 1;
+    justify-content:stretch;
+  }
+
+  .actions button{
+    flex:1 1 auto;
+  }
+
+  .countdown{
+    font-size:2.1rem;
+  }
+}
+```
+
+Citations:
+[1] 7 web typography rules - Wix.com https://www.wix.com/blog/web-typography-rules
+[2] Typography Style Guide: An Essential Resource for Web Designers https://clay.global/blog/web-design-guide/typography-guide
+[3] Web Typography: The Complete Guide for Designers - Elementor https://elementor.com/blog/guide-to-web-typography/
+[4] 9 Best CSS UI Kits and Component Libraries for 2025 | UI Bakery Blog https://uibakery.io/blog/9-best-css-ui-kits-and-component-libraries-for-2025
+[5] The ultimate guide to CSS frameworks in 2025 | Contentful https://www.contentful.com/blog/css-frameworks/
+[6] What is the most modern CSS styling method in 2025? Tailwind or ... https://www.reddit.com/r/css/comments/1ll61w6/what_is_the_most_modern_css_styling_method_in/
+[7] Top 7 CSS Frameworks for Developers in 2025 - BrowserStack https://www.browserstack.com/guide/top-css-frameworks
+[8] Top Best CSS Framework In 2025 For Building Modern Websites https://helixbeat.com/best-css-frameworks-2025-building-modern-websites/
+[9] User Interface Principles: Neumorphism and Glassmorphism https://pieces.app/blog/user-interface-neumorphism-glassmorphism
+[10] CSS techniques every developer should know in 2025 https://dev.to/dimeloper/css-techniques-every-developer-should-know-in-2025-30p9
+[11] UI Trends: Neumorphism vs. Glassmorphism vs. Neubrutalism https://www.cccreative.design/blogs/differences-in-ui-design-trends-neumorphism-glassmorphism-and-neubrutalism
+[12] 10 Modern HTML & CSS Techniques Every Designer Should Know ... https://abp.io/community/posts/10-modern-html-css-techniques-every-designer-should-know-in-2025-zxnwilf4
+[13] Legibility | Web Style Guide 3 https://www.webstyleguide.com/wsg3/8-typography/3-legibility.html
+[14] Neumorphism CSS shadow generator https://neumorphism.io
+[15] Responsive Design: Best Practices Guide [2025] - UXPin https://www.uxpin.com/studio/blog/best-practices-examples-of-excellent-responsive-design/
+[16] glass neumorphism - Dribbble https://dribbble.com/search/glass-neumorphism
+[17] 15 Best CSS Trends to Look Out in 2025 - LambdaTest https://www.lambdatest.com/blog/best-css-trends/
+[18] Typography – Material Design 3 https://m3.material.io/styles/typography/applying-type
+[19] Neumorphism vs Glassmorphism: UI Design Showdown - Brandemic https://brandemic.in/blog/neumorphism-vs-glassmorphism-ui-design/
+[20] Six tips for better web typography - CSS-Tricks https://css-tricks.com/six-tips-for-better-web-typography/
