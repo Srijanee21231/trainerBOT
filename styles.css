@@ -40,11 +40,8 @@ h1{margin:0 0 18px;font-size:28px}
 
 
 
-i want the stylesheet to make my website modern and legible and stylish. modify above
 
-Here is a refined version of your stylesheet that keeps your colors but improves legibility, spacing, and modern feel (better typography, contrast, and cleaner layout): [1][2][3]
 
-```css
 :root{
   --bg:#020617;
   --bg-gradient-start:#020617;
@@ -365,26 +362,4 @@ p{
     font-size:2.1rem;
   }
 }
-```
 
-Citations:
-[1] 7 web typography rules - Wix.com https://www.wix.com/blog/web-typography-rules
-[2] Typography Style Guide: An Essential Resource for Web Designers https://clay.global/blog/web-design-guide/typography-guide
-[3] Web Typography: The Complete Guide for Designers - Elementor https://elementor.com/blog/guide-to-web-typography/
-[4] 9 Best CSS UI Kits and Component Libraries for 2025 | UI Bakery Blog https://uibakery.io/blog/9-best-css-ui-kits-and-component-libraries-for-2025
-[5] The ultimate guide to CSS frameworks in 2025 | Contentful https://www.contentful.com/blog/css-frameworks/
-[6] What is the most modern CSS styling method in 2025? Tailwind or ... https://www.reddit.com/r/css/comments/1ll61w6/what_is_the_most_modern_css_styling_method_in/
-[7] Top 7 CSS Frameworks for Developers in 2025 - BrowserStack https://www.browserstack.com/guide/top-css-frameworks
-[8] Top Best CSS Framework In 2025 For Building Modern Websites https://helixbeat.com/best-css-frameworks-2025-building-modern-websites/
-[9] User Interface Principles: Neumorphism and Glassmorphism https://pieces.app/blog/user-interface-neumorphism-glassmorphism
-[10] CSS techniques every developer should know in 2025 https://dev.to/dimeloper/css-techniques-every-developer-should-know-in-2025-30p9
-[11] UI Trends: Neumorphism vs. Glassmorphism vs. Neubrutalism https://www.cccreative.design/blogs/differences-in-ui-design-trends-neumorphism-glassmorphism-and-neubrutalism
-[12] 10 Modern HTML & CSS Techniques Every Designer Should Know ... https://abp.io/community/posts/10-modern-html-css-techniques-every-designer-should-know-in-2025-zxnwilf4
-[13] Legibility | Web Style Guide 3 https://www.webstyleguide.com/wsg3/8-typography/3-legibility.html
-[14] Neumorphism CSS shadow generator https://neumorphism.io
-[15] Responsive Design: Best Practices Guide [2025] - UXPin https://www.uxpin.com/studio/blog/best-practices-examples-of-excellent-responsive-design/
-[16] glass neumorphism - Dribbble https://dribbble.com/search/glass-neumorphism
-[17] 15 Best CSS Trends to Look Out in 2025 - LambdaTest https://www.lambdatest.com/blog/best-css-trends/
-[18] Typography – Material Design 3 https://m3.material.io/styles/typography/applying-type
-[19] Neumorphism vs Glassmorphism: UI Design Showdown - Brandemic https://brandemic.in/blog/neumorphism-vs-glassmorphism-ui-design/
-[20] Six tips for better web typography - CSS-Tricks https://css-tricks.com/six-tips-for-better-web-typography/
