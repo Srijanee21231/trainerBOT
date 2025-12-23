@@ -43,8 +43,8 @@ function generateRoutine(){
   const reps = Math.max(1, parseInt(repsEl.value)||1)
   const sets = Math.max(1, parseInt(setsEl.value)||1)
 
-  const workSecondsPerRep = 2
-  const restAfterExercise = 60
+  const workSecondsPerRep = 1.6
+  const restAfterExercise = 30
   const restAfterSet = restEl.value
 
   const exercises = selected.length ? selected : Array.from(document.querySelectorAll('input[name="exercise"]')).map(i=>i.value)
